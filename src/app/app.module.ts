@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponentModule } from "../libs/test-component.module";
+// import { TestComponentModule } from "../libs/test-component.module";
 
 @NgModule({
     declarations: [
@@ -14,7 +14,7 @@ import { TestComponentModule } from "../libs/test-component.module";
     imports: [
         BrowserModule,
         AppRoutingModule,
-        TestComponentModule
+        // TestComponentModule
     ]
 })
 export class AppModule { }

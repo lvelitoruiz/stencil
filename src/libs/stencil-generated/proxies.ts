@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Even
 
 import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 
-import { Components } from '@test-component/dist/types/components';
+// import { Components } from '@test-component/dist/types/components';
 
 
 @ProxyCmp({
@@ -26,7 +26,7 @@ export class DropdownTest {
 }
 
 
-export declare interface DropdownTest extends Components.DropdownTest {}
+// export declare interface DropdownTest extends Components.DropdownTest {}
 
 
 @ProxyCmp({
@@ -48,6 +48,6 @@ export class MyComponent {
 }
 
 
-export declare interface MyComponent extends Components.MyComponent {}
+// export declare interface MyComponent extends Components.MyComponent {}
 
 
