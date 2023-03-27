@@ -15,24 +15,28 @@ export class EventServiceService {
   emitLoadingEvent(data: boolean) {
     console.log('the event emitted',data);
     this.loadingEvent.emit(data);
-    (window as any).Android.handleCustomEvent(data);
+    let mobileData = '{“accion”: “LOADING”,“valor”: "true"}';
+    (window as any).MobileInterface.handleCustomEvent(mobileData);
   }
 
   emitAnalyticsEvent(data: object) {
     console.log('the event emitted',data);
     this.analyticsEvent.emit(data);
-    (window as any).Android.handleCustomEvent(data);
+    let mobileData = '{“accion”: “ANALYTICS”,“valor”: {“event”: “error”,“value1”: “value1"}}';
+    (window as any).MobileInterface.handleCustomEvent(mobileData);
   }
 
   emitAppData(data: object) {
     console.log('the event emitted',data);
     this.appEvent.emit(data);
-    (window as any).Android.handleCustomEvent(data);
+    let mobileData = '{“accion”: “OPEN”,"app":"WHATSAPP",“valor”: "http://whatsapp.com/asasas"}';
+    (window as any).MobileInterface.handleCustomEvent(mobileData);
   }
 
   emitNavigationData(data: string) {
     console.log('the event emitted',data);
     this.navigationEvent.emit(data);
-    (window as any).Android.handleCustomEvent(data);
+    let mobileData = '{“accion”: “NAVIGATION”,“valor”: "back"}';
+    (window as any).MobileInterface.handleCustomEvent(mobileData);
   }
 }
